@@ -5,6 +5,14 @@ module.exports = {
       name: `Steven Lantz`,
       summary: `who is an avid X-Files fan and hoping to be a wealthy programmer one day.`,
     },
+    contact: {
+      name: `Steven Lantz`,
+      company: `F.B.I.`,
+      address: `935 Pennsylvania Avenue, NW
+Washington, D.C. 20535-0001`
+    }
+    ,
+
     description: `Project 1 ITDEV-164`,
     siteUrl: `https://Matc.edu`,
    
@@ -19,12 +27,20 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-contentful`,
+        options:{
+          spaceId: `n26dppfe0trm`,
+          accessToken: `igiGQ6cOJFuDp5MUW9Oopdj5mQv-NfYctt8kfswTImQ`
+        }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
+    
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -50,12 +66,8 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
+   
+    
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -124,8 +136,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+     
   ],
 }

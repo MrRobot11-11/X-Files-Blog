@@ -22,7 +22,8 @@ const H1 = styled.h1`
 const Links = styled.div`
   display: flex;
   flex-direction: row;
-  padding-left: 200px;
+  padding-left: 100px;
+  padding-top: 20px;
 
 `
 
@@ -43,10 +44,12 @@ const Header = ({ siteTitle }) => (
         </StyledLink>
        
       </H1>
-      <StyledLink to="/">
+      <StyledLink to="about.js">
         <Links>About</Links>
         </StyledLink>
-      
+       <StyledLink to="/">
+        <Links>Contact</Links>
+        </StyledLink>
     
     </Inner>
   </Outer>
