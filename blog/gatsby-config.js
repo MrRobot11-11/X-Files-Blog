@@ -7,7 +7,7 @@ module.exports = {
     },
     contact: {
       name: `Steven Lantz`,
-      company: `F.B.I.`,
+      company: `X-Files Blog`,
       address: `935 Pennsylvania Avenue, NW
 Washington, D.C. 20535-0001`
     }
@@ -29,10 +29,11 @@ Washington, D.C. 20535-0001`
     {
       resolve: `gatsby-source-contentful`,
         options:{
-          spaceId: `n26dppfe0trm`,
-          accessToken: `igiGQ6cOJFuDp5MUW9Oopdj5mQv-NfYctt8kfswTImQ`
+          spaceId: `${process.env.SPACE_ID}`,
+          accessToken: `${process.env.ACCESS_TOKEN}`
         }
-    },
+      },
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -68,7 +69,7 @@ Washington, D.C. 20535-0001`
     `gatsby-plugin-styled-components`,
    
     
-    {
+/*     {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
@@ -120,7 +121,7 @@ Washington, D.C. 20535-0001`
           },
         ],
       },
-    },
+    }, */
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

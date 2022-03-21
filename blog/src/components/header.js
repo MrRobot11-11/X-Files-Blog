@@ -31,7 +31,7 @@ const StyledLink = styled(Link)`
   color: white;
   text-decoration: none;
   &:hover {
-    color: lightgreen;
+    color: #1db825;
   }
 `
 //Comment
@@ -44,10 +44,10 @@ const Header = ({ siteTitle }) => (
         </StyledLink>
        
       </H1>
-      <StyledLink to="about.js">
+      <StyledLink to="/blog/src/pages/about.js">
         <Links>About</Links>
         </StyledLink>
-       <StyledLink to="/">
+       <StyledLink to="/blog/src/pages/contact.js">
         <Links>Contact</Links>
         </StyledLink>
     
@@ -60,7 +60,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: `X-Files Blog`,
 }
 
 export default Header

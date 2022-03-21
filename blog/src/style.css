@@ -58,8 +58,8 @@
   --color-primary: #005b99;
   --color-text: #fafbfc;
   --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
+  --color-heading: #005b99;
+  --color-heading-black:#1db825;
   --color-accent: #d1dce5;
 }
 
@@ -92,7 +92,8 @@ body {
 }
 
 footer {
-  padding: var(--spacing-6) var(--spacing-0);
+  /* padding: var(--spacing-6) var(--spacing-0); */
+  margin-top: 450px;
 }
 
 hr {
@@ -244,6 +245,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
+  color:#1db825
 }
 
 /* Custom classes */

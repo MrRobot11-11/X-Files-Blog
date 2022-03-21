@@ -26,7 +26,7 @@ const BlogPostTemplate = ({ data, location }) => {
         />
       
         <footer>
-          <Bio />
+          
         </footer>
       
      

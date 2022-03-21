@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 
 
@@ -21,7 +22,10 @@ const BlogIndex = ({ data, location }) => {
         <li>
           <Link to={edge.node.slug} key={edge.node.id}>{edge.node.title}</Link>
           <div>
-            
+            <GatsbyImage
+              image={edge.node.heroImage.gatsbyImageData}
+              alt="test"
+              />
           </div>
           <div>
             {edge.node.body.childMarkdownRemark.excerpt}
@@ -49,10 +53,14 @@ allContentfulBlogPost {
         body {
           childMarkdownRemark {
             excerpt
-            frontmatter {
-              date(formatString: "MMMM DD, YYYY")
-            }
           }
+        }
+        heroImage {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: BLURRED
+            width: 300
+          )
         }
       }
     }

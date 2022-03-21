@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby" //If want to create link to another page/component, need gatsby link
-import { StaticImage } from "gatsby-plugin-image"
+
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -29,6 +29,7 @@ export const query = graphql`
                 contact {
                     name
                     company
+                    
                 }
             }
         }

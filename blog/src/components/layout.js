@@ -8,7 +8,7 @@ import BackgroundImage from 'gatsby-background-image'
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname
+  const isRootPath = rootPath
   let header
   
   const data = useStaticQuery(
@@ -24,6 +24,7 @@ const Layout = ({ location, title, children }) => {
       }
     `
   )
+
 
   // Set ImageData.
   const imageData = data.desktop.childImageSharp.fluid
@@ -56,15 +57,17 @@ const Layout = ({ location, title, children }) => {
      
         
     
-      <Header siteTitle={title || `Title`} />
+      <Header  />
       
       <main>{children}
       
       </main>
       <footer>
+       
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
+     
       </footer>
      
     </div>
