@@ -1,3 +1,7 @@
+require(`dotenv`).config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
   siteMetadata: {
     title: `X-Files Blog`,
@@ -19,6 +23,9 @@ Washington, D.C. 20535-0001`
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
+   
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -66,8 +73,8 @@ Washington, D.C. 20535-0001`
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`,
-   
+    `gatsby-transformer-remark`,
+    
     
 /*     {
       resolve: `gatsby-plugin-feed`,

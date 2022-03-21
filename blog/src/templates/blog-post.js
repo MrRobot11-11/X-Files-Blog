@@ -1,11 +1,13 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-
+import styled from 'styled-components'
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const BlogPostTemplate = ({ data, location }) => {
+
+
+const BlogPostTemplate = ({ data}) => {
  const { title, body } = data.contentfulBlogPost
   
 
@@ -17,9 +19,13 @@ const BlogPostTemplate = ({ data, location }) => {
       />
      
         <header>
-          <h1 itemProp="headline">{title}</h1>
+           
+          <h1  itemProp="headline">{title}</h1>
+         
           <p>{data.contentfulBlogPost.frontmatter}</p>
+         
         </header>
+        
         <section
           dangerouslySetInnerHTML={{__html: body.childMarkdownRemark.html}}
           itemProp="articleBody"

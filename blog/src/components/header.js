@@ -14,16 +14,19 @@ const Inner = styled.div`
   flex-direction:row;
   max-width: 960px;
   padding: 1.45rem 1.0875rem;
+  
 `
 
 const H1 = styled.h1`
   margin: 6px;
+  
 `
 const Links = styled.div`
   display: flex;
   flex-direction: row;
-  padding-left: 100px;
+  padding-left: 50px;
   padding-top: 20px;
+  font-size: 1.7rem;
 
 `
 

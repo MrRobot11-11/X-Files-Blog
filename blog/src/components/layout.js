@@ -50,6 +50,7 @@ const Layout = ({ location, title, children }) => {
       Tag="section"
       fluid={imageData}
       backgroundColor={`#040e18`}
+      width={100}
       
     >
     

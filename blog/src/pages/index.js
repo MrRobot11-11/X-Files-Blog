@@ -25,7 +25,7 @@ const BlogIndex = ({ data, location }) => {
             <GatsbyImage
               image={edge.node.heroImage.gatsbyImageData}
               alt="test"
-              />
+            />
           </div>
           <div>
             {edge.node.body.childMarkdownRemark.excerpt}
@@ -43,8 +43,9 @@ const BlogIndex = ({ data, location }) => {
 export default BlogIndex
 
 export const pageQuery = graphql`
-{  
-allContentfulBlogPost {
+
+{
+  allContentfulBlogPost(sort: {fields: slug }) {
     edges {
       node {
         id
@@ -53,17 +54,18 @@ allContentfulBlogPost {
         body {
           childMarkdownRemark {
             excerpt
+            frontmatter {
+              date
+            }
           }
         }
         heroImage {
-          gatsbyImageData(
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            width: 300
-          )
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 300)
         }
       }
     }
   }
 }
+
+
 `

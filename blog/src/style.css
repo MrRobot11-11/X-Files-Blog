@@ -93,7 +93,7 @@ body {
 
 footer {
   /* padding: var(--spacing-6) var(--spacing-0); */
-  margin-top: 450px;
+  margin-top: 150px;
 }
 
 hr {
@@ -190,8 +190,11 @@ ul li,
 ol li {
   padding-left: var(--spacing-0);
   margin-bottom: calc(var(--spacing-8) / 2);
+  
 }
-
+ul li:hover{
+  font-size: 1.5rem;
+}
 li > p {
   margin-bottom: calc(var(--spacing-8) / 2);
 }
@@ -200,9 +203,11 @@ li *:last-child {
   margin-bottom: var(--spacing-0);
 }
 
+
 li > ul {
   margin-left: var(--spacing-8);
   margin-top: calc(var(--spacing-8) / 2);
+  
 }
 
 blockquote {
@@ -240,7 +245,13 @@ table thead tr th {
 
 a {
   color: var(--color-primary);
+
+  
 }
+.aSize > a, h1, h2, h3, h4, hr, h6, h5, h6 {
+  font-size: 2.5rem;
+}
+
 
 a:hover,
 a:focus {
@@ -314,6 +325,7 @@ a:focus {
 
 .blog-post header h1 {
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
+  
 }
 
 .blog-post header p {
