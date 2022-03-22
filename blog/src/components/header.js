@@ -47,10 +47,10 @@ const Header = ({ siteTitle }) => (
         </StyledLink>
        
       </H1>
-      <StyledLink to="/blog/src/pages/about.js">
+      <StyledLink to="/about/">
         <Links>About</Links>
         </StyledLink>
-       <StyledLink to="/blog/src/pages/contact.js">
+       <StyledLink to="/contact/">
         <Links>Contact</Links>
         </StyledLink>
     
