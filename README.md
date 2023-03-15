@@ -1,2 +1,2 @@
-# steve-lantz-p1
-Project 1
+# Blog Project
+A website built using gatsby and react.
