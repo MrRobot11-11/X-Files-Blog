@@ -1,2 +1,2 @@
 # Xfiles Blog
-A website built using gatsby and react.
+A blog website using GatsbyJS, Contentful, Netlify, and JavaScript.
